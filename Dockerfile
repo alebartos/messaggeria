@@ -59,7 +59,7 @@ RUN npm ci --only=production --audit --audit-level=moderate --legacy-peer-deps &
     npm cache clean --force
 
 COPY backend/prisma ./prisma
-RUN npx prisma generate && rm -rf /root/.npm
+RUN npx prisma@5.22.0 generate && rm -rf /root/.npm
 COPY --from=backend-builder /app/backend/dist ./dist
 RUN mkdir -p /app/data
 
@@ -85,7 +85,7 @@ stderr_logfile=/dev/stderr
 stderr_logfile_maxbytes=0
 
 [program:backend]
-command=sh -c "cd /app/backend && npx prisma db push --skip-generate && node dist/index.js"
+command=sh -c "cd /app/backend && npx prisma@5.22.0 db push --skip-generate && node dist/index.js"
 autostart=true
 autorestart=true
 stdout_logfile=/dev/stdout
