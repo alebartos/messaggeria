@@ -1,4 +1,7 @@
 # Gioco Messaggeria
+
+> **English summary.** Messaggeria is a real-time messaging game for venues and events: guests at each table send anonymous or named messages and emoji reactions, while admins and staff run tables, challenges, broadcasts and a TV view. Stack: React + Vite (TypeScript) frontend, Express + Prisma + SQLite backend, JWT auth with role-based permissions, rate limiting, Helmet/CSP. Shipped as a Docker image with a GitHub Actions CI pipeline. Built for the Web Applications course (Applicazioni Web) at the University of Camerino.
+
 Questo gioco è stato sviluppato per portare una moderna versione della messaggeria al DADAZEN a Camerino; Ed è stato recentemente testato durante un paio di serate reali.
 
 Inizialmente l'app era stata pensata per essere gestita da due admin non modificabili ma per adattarsi meglio al progetto di Applicazioni Web è stata inserita la possibilità di registrarsi al primo avvio come admin e scegliere la propria password (quindi abbiamo aggiunto più o meno 1500 righe di codice a quello che era l'app originale);
@@ -10,7 +13,7 @@ Inoltre, inizialmente il sito si appoggiava a supabase, ma questa dipendenza è 
 [![Docker Pulls](https://img.shields.io/docker/pulls/ale120800/messaggeria?color=blue)](https://hub.docker.com/r/ale120800/messaggeria)
 [![Docker Stars](https://img.shields.io/docker/stars/ale120800/messaggeria?color=orange)](https://hub.docker.com/r/ale120800/messaggeria)
 
-[![CI/CD Pipeline](https://github.com/alebartos/Applicazioni/actions/workflows/ci.yml/badge.svg)](https://github.com/alebartos/Applicazioni/actions/workflows/ci.yml)
+[![CI/CD Pipeline](https://github.com/alebartos/messaggeria/actions/workflows/ci.yml/badge.svg)](https://github.com/alebartos/messaggeria/actions/workflows/ci.yml)
 
 ## Avvio Rapido
 Per avviare il container Docker si può seguire una di queste 3 vie:
@@ -31,7 +34,7 @@ docker run -d \
 <summary>Build Locale</summary>
 
 ```bash
-git clone https://github.com/alebartos/Applicazioni.git messaggeria
+git clone https://github.com/alebartos/messaggeria.git messaggeria
 cd ./messaggeria
 docker build --no-cache -t messaggeria .
 docker run -d \
@@ -76,7 +79,6 @@ Admin:
 Player:
 - Scrivere messaggi (anonimo e non)
 - Reazioni emoji
--
 
 ## Sicurezza
 
@@ -195,7 +197,7 @@ docker volume prune -f
 
 ## Contributi
 
-...
+Alessandro Bartolini, Matteo Polverino, Elena Sofia D'Ascanio
 
 ## Licenza
 
